@@ -12,5 +12,6 @@ export class AppComponent {
 
   constructor(service: PokemonService) {
     service.findAll(0, 10).subscribe(pokemons => console.log(pokemons));
+    service.findOne(1).subscribe(pokemon => console.log(pokemon));
   }
 }
