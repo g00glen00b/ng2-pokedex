@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import {PokemonService} from './shared/services/pokemon.service';
 
 @Component({
+  providers: [PokemonService],
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'app works!';
+
+
+  constructor(service: PokemonService) {
+    service.findAll(0, 10).subscribe(pokemons => console.log(pokemons));
+  }
 }
