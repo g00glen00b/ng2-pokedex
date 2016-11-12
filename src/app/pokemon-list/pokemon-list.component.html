@@ -1,1 +1,3 @@
-<p>Gotta catch all {{count}} pokémons</p>
+<md-card *ngFor="let pokemon of pokemons">
+  <md-card-title>#{{pokemon.id}} {{pokemon.name}}</md-card-title>
+</md-card>
