@@ -23,7 +23,7 @@ export class PokemonService {
 
   findAll(offset: number = 0, limit: number = 20): Observable<PokemonList> {
     return this._http
-      .get(`${this._baseUrl}/pokemon?offset=${offset}&limit=${limit}`)
+      .get(`${this._baseUrl}/pokemon/?offset=${offset}&limit=${limit}`)
       .map(response => response.json())
       .map(results => this.getList(results));
   }
