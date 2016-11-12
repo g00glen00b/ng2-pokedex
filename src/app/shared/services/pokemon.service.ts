@@ -42,7 +42,7 @@ export class PokemonService {
   }
 
   getList(data):PokemonList {
-    return new PokemonList(_.map(data.results, result => this.getEntry(result)), data.count);
+    return new PokemonList(data.results.map(result => this.getEntry(result)), data.count);
   }
 
   getEntry(data): PokemonEntry {
@@ -53,31 +53,28 @@ export class PokemonService {
   }
 
   getAbilities(abilities: any[]): PokemonAbility[] {
-    return _(abilities)
+    return abilities
       .map(ability => new PokemonAbility(ability.ability.name, ability['is_hidden'], ability.slot))
-      .orderBy('order')
-      .value();
+      .sort((ability1, ability2) => ability1.order - ability2.order);
   }
 
   getCategory(genera: any[]): string {
-    return _(genera)
+    let genus = genera
       .filter(genera => genera.language.name === this._language)
-      .map(genera => genera.genus)
-      .first();
+      .map(genera => genera.genus);
+    return genus[0];
   }
 
   getDescriptions(entries: any[]): PokemonDescription[] {
-    return _(entries)
+    return entries
       .filter(entry => entry.language.name === this._language)
-      .map(entry => new PokemonDescription(entry['flavor_text'], _.startCase(_.replace(entry.version.name, '-', ' '))))
-      .value();
+      .map(entry => new PokemonDescription(entry['flavor_text'], _.startCase(_.replace(entry.version.name, '-', ' '))));
   }
 
   getTypes(types: any[]): PokemonType[] {
-    return _(types)
+    return types
       .map(type => new PokemonType(type.type.name, type.slot))
-      .orderBy('order')
-      .value();
+      .sort((type1, type2) => type1.order - type2.order);
   }
 
   getStats(stats: any[]): PokemonStats {
