@@ -59,10 +59,9 @@ export class PokemonService {
   }
 
   getCategory(genera: any[]): string {
-    let genus = genera
-      .filter(genera => genera.language.name === this._language)
-      .map(genera => genera.genus);
-    return genus[0];
+    return genera
+      .find(genera => genera.language.name === this._language)
+      .genus;
   }
 
   getDescriptions(entries: any[]): PokemonDescription[] {
@@ -79,12 +78,12 @@ export class PokemonService {
 
   getStats(stats: any[]): PokemonStats {
     return new PokemonStats(
-      _.find(stats, stat => stat.stat.name === 'hp')['base_stat'],
-      _.find(stats, stat => stat.stat.name === 'attack')['base_stat'],
-      _.find(stats, stat => stat.stat.name === 'defense')['base_stat'],
-      _.find(stats, stat => stat.stat.name === 'special-attack')['base_stat'],
-      _.find(stats, stat => stat.stat.name === 'special-defense')['base_stat'],
-      _.find(stats, stat => stat.stat.name === 'speed')['base_stat']
+      stats.find(stat => stat.stat.name === 'hp')['base_stat'],
+      stats.find(stat => stat.stat.name === 'attack')['base_stat'],
+      stats.find(stat => stat.stat.name === 'defense')['base_stat'],
+      stats.find(stat => stat.stat.name === 'special-attack')['base_stat'],
+      stats.find(stat => stat.stat.name === 'special-defense')['base_stat'],
+      stats.find(stat => stat.stat.name === 'speed')['base_stat']
     );
   }
 }
