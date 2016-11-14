@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import {MaterialModule} from '@angular/material';
+import { PokemonEntryComponent } from './pokemon-list/pokemon-entry/pokemon-entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    PokemonEntryComponent
   ],
   imports: [
     BrowserModule,
