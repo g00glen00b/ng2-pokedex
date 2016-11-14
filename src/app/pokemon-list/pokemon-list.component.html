@@ -1,3 +1,10 @@
-<md-card *ngFor="let pokemon of pokemons">
-  <md-card-title>#{{pokemon.id}} {{pokemon.name}}</md-card-title>
-</md-card>
+<div class="card" *ngFor="let pokemon of pokemons">
+  <div class="card-image">
+    <img [src]="pokemon?.sprite">
+  </div>
+  <div class="card-content">
+    <span class="card-title truncate" [title]="pokemon?.name">
+      #{{pokemon?.id}} <span class="capitalize">{{pokemon?.name}}</span>
+    </span>
+  </div>
+</div>
