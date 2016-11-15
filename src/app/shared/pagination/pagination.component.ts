@@ -18,10 +18,11 @@ export class PaginationComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
+    this.getPages(this.offset, this.limit, this.size);
   }
 
   ngOnChanges() {
-
+    this.getPages(this.offset, this.limit, this.size);
   }
 
   getPages(offset: number, limit: number, size: number) {
