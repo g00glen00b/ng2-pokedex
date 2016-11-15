@@ -1,3 +1,10 @@
-<p>
-  pokemon-entry works!
-</p>
+<div class="card">
+  <div class="card-image">
+    <img [src]="pokemon?.sprite">
+  </div>
+  <div class="card-content">
+    <span class="card-title truncate" [title]="pokemon?.name">
+      #{{pokemon?.id}} <span class="capitalize">{{pokemon?.name}}</span>
+    </span>
+  </div>
+</div>
