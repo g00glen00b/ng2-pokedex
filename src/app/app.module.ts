@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import {MaterialModule} from '@angular/material';
 import { PokemonEntryComponent } from './pokemon-list/pokemon-entry/pokemon-entry.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonListComponent,
-    PokemonEntryComponent
+    PokemonEntryComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
