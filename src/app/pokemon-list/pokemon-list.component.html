@@ -3,4 +3,4 @@
     <app-pokemon-entry [pokemon]="pokemon"></app-pokemon-entry>
   </div>
 </div>
-<app-pagination [offset]="offset" [limit]="limit" [size]="count"></app-pagination>
+<app-pagination [offset]="offset" [limit]="limit" [size]="count" (pageChange)="onPageChange()"></app-pagination>

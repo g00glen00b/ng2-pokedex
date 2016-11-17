@@ -10,7 +10,7 @@ export class PaginationComponent implements OnInit, OnChanges {
   @Input() limit: number = 1;
   @Input() size: number = 1;
   @Input() range: number = 3;
-  @Output() pageChange: EventEmitter<number>;
+  @Output() pageChange: EventEmitter<number> = new EventEmitter<number>();
 
   pages: Observable<number[]>;
   currentPage: number;
@@ -49,7 +49,7 @@ export class PaginationComponent implements OnInit, OnChanges {
 
   selectPage(page: number) {
     if (this.isValidPageNumber(page, this.totalPages)) {
-      this.pageChange.emit(page);
+      this.pageChange.emit((page - 1) * this.limit);
     }
   }
 }

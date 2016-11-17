@@ -26,4 +26,8 @@ export class PokemonListComponent implements OnInit {
       this.count = result.count;
     });
   }
+
+  onPageChange() {
+    console.log('changed page');
+  }
 }
