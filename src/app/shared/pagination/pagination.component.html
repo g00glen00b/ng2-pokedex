@@ -1,3 +1,7 @@
-<ul>
-  <li *ngFor="let page of pages | async">{{page}}</li>
+<ul class="pagination">
+  <li *ngFor="let page of pages | async">
+    <a href="javascript:void(0)">
+      {{page}}
+    </a>
+  </li>
 </ul>
