@@ -27,7 +27,8 @@ export class PokemonListComponent implements OnInit {
     });
   }
 
-  onPageChange() {
-    console.log('changed page');
+  onPageChange(offset) {
+    this.offset = offset;
+    this.findAll(offset, this.limit);
   }
 }
