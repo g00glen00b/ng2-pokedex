@@ -1,7 +1,13 @@
-<ul class="pagination" >
+<ul class="pagination">
+  <li class="disabled" (click)="cancelEvent($event)" *ngIf="(currentPage - range) > 1">
+    <a href="">...</a>
+  </li>
   <li *ngFor="let page of pages | async" [class.active]="page == currentPage">
     <a href="" (click)="selectPage(page, $event)">
       {{page}}
     </a>
+  </li>
+  <li class="disabled" (click)="cancelEvent($event)" *ngIf="(currentPage + range) < totalPages">
+    <a href="">...</a>
   </li>
 </ul>

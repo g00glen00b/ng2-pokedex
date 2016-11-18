@@ -48,9 +48,13 @@ export class PaginationComponent implements OnInit, OnChanges {
   }
 
   selectPage(page: number, event) {
-    event.preventDefault();
+    this.cancelEvent(event);
     if (this.isValidPageNumber(page, this.totalPages)) {
       this.pageChange.emit((page - 1) * this.limit);
     }
+  }
+
+  cancelEvent(event) {
+    event.preventDefault();
   }
 }
