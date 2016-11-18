@@ -1,4 +1,7 @@
 <ul class="pagination">
+  <li (click)="selectPage(currentPage - 1, $event)" [class.disabled]="currentPage == 1">
+    <a href="">&lsaquo;</a>
+  </li>
   <li class="disabled" (click)="cancelEvent($event)" *ngIf="(currentPage - range) > 1">
     <a href="">...</a>
   </li>
@@ -9,5 +12,8 @@
   </li>
   <li class="disabled" (click)="cancelEvent($event)" *ngIf="(currentPage + range) < totalPages">
     <a href="">...</a>
+  </li>
+  <li (click)="selectPage(currentPage + 1, $event)" [class.disabled]="currentPage == totalPages">
+    <a href="">&rsaquo;</a>
   </li>
 </ul>
