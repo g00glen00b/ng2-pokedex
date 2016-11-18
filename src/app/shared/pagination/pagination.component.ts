@@ -47,7 +47,8 @@ export class PaginationComponent implements OnInit, OnChanges {
     return Math.ceil(Math.max(size, 1) / Math.max(limit, 1));
   }
 
-  selectPage(page: number) {
+  selectPage(page: number, event) {
+    event.preventDefault();
     if (this.isValidPageNumber(page, this.totalPages)) {
       this.pageChange.emit((page - 1) * this.limit);
     }

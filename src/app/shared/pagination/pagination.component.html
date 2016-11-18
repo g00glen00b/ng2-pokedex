@@ -1,6 +1,6 @@
 <ul class="pagination" >
   <li *ngFor="let page of pages | async" [class.active]="page == currentPage">
-    <a href="javascript:void(0)" (click)="selectPage(page)">
+    <a href="" (click)="selectPage(page, $event)">
       {{page}}
     </a>
   </li>
