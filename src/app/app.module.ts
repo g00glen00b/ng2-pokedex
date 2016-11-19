@@ -1,14 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
-import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
-import {MaterialModule} from '@angular/material';
-import { PokemonEntryComponent } from './pokemon-list/pokemon-entry/pokemon-entry.component';
-import { PaginationComponent } from './shared/pagination/pagination.component';
-import { PokemonInfoComponent } from './pokemon-info/pokemon-info.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {AppComponent} from './app.component';
+import {PokemonListComponent} from './pokemon-list/pokemon-list.component';
+import {PokemonEntryComponent} from './pokemon-list/pokemon-entry/pokemon-entry.component';
+import {PaginationComponent} from './shared/pagination/pagination.component';
+import {PokemonInfoComponent} from './pokemon-info/pokemon-info.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,11 @@ import { PokemonInfoComponent } from './pokemon-info/pokemon-info.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      { path: 'pokemon/:id', component: PokemonInfoComponent },
+      { path: '', component: PokemonListComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
