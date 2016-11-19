@@ -8,13 +8,15 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import {MaterialModule} from '@angular/material';
 import { PokemonEntryComponent } from './pokemon-list/pokemon-entry/pokemon-entry.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
+import { PokemonInfoComponent } from './pokemon-info/pokemon-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonListComponent,
     PokemonEntryComponent,
-    PaginationComponent
+    PaginationComponent,
+    PokemonInfoComponent
   ],
   imports: [
     BrowserModule,
