@@ -10,6 +10,7 @@ import {PokemonInfoComponent} from './pokemon-info/pokemon-info.component';
 import {RouterModule} from '@angular/router';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PokemonAbilityInfoComponent } from './pokemon-info/pokemon-ability-info/pokemon-ability-info.component';
+import { FeetPipe } from './shared/metrics/feet.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PokemonAbilityInfoComponent } from './pokemon-info/pokemon-ability-info
     PaginationComponent,
     PokemonInfoComponent,
     NavbarComponent,
-    PokemonAbilityInfoComponent
+    PokemonAbilityInfoComponent,
+    FeetPipe
   ],
   imports: [
     BrowserModule,
