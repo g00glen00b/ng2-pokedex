@@ -11,6 +11,7 @@ import {RouterModule} from '@angular/router';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PokemonAbilityInfoComponent } from './pokemon-info/pokemon-ability-info/pokemon-ability-info.component';
 import { FeetPipe } from './shared/metrics/feet.pipe';
+import { PoundPipe } from './shared/metrics/pound.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FeetPipe } from './shared/metrics/feet.pipe';
     PokemonInfoComponent,
     NavbarComponent,
     PokemonAbilityInfoComponent,
-    FeetPipe
+    FeetPipe,
+    PoundPipe
   ],
   imports: [
     BrowserModule,
