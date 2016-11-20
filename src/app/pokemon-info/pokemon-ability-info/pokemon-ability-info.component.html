@@ -1,0 +1,24 @@
+<div class="card-panel blue-grey lighten-1">
+  <div class="row">
+    <div class="col s6">
+      <dl>
+        <dt class="white-text">Height</dt>
+        <dd class="black-text">{{info?.height}}</dd>
+      </dl>
+      <dl>
+        <dt class="white-text">Weight</dt>
+        <dd class="black-text">{{info?.weight}}</dd>
+      </dl>
+    </div>
+    <div class="col s6">
+      <dl>
+        <dt class="white-text">Category</dt>
+        <dd class="black-text">{{info?.category}}</dd>
+      </dl>
+      <dl>
+        <dt class="white-text">Abilities</dt>
+        <dd class="black-text capitalize" *ngFor="let ability of info?.abilities">{{ability?.name}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

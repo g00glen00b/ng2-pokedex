@@ -9,6 +9,7 @@ import {PaginationComponent} from './shared/pagination/pagination.component';
 import {PokemonInfoComponent} from './pokemon-info/pokemon-info.component';
 import {RouterModule} from '@angular/router';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { PokemonAbilityInfoComponent } from './pokemon-info/pokemon-ability-info/pokemon-ability-info.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     PokemonEntryComponent,
     PaginationComponent,
     PokemonInfoComponent,
-    NavbarComponent
+    NavbarComponent,
+    PokemonAbilityInfoComponent
   ],
   imports: [
     BrowserModule,
