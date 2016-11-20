@@ -7,6 +7,7 @@ import {PokemonEntry} from '../../shared/models/pokemon-entry';
 })
 export class PokemonEntryComponent {
   @Input() pokemon: PokemonEntry = null;
+  @Input() withLink: boolean = true;
 
   constructor() { }
 }

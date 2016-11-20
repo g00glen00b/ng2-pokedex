@@ -7,7 +7,7 @@
       #{{pokemon?.id}} <span class="capitalize">{{pokemon?.name}}</span>
     </span>
   </div>
-  <div class="card-action">
+  <div class="card-action" *ngIf="withLink">
     <a href="" [routerLink]="['/pokemon', pokemon?.id]">View</a>
   </div>
 </div>
