@@ -54,7 +54,7 @@ export class PokemonService {
 
   getAbilities(abilities: any[]): PokemonAbility[] {
     return abilities
-      .map(ability => new PokemonAbility(ability.ability.name, ability['is_hidden'], ability.slot))
+      .map(ability => new PokemonAbility(_.startCase(ability.ability.name), ability['is_hidden'], ability.slot))
       .sort((ability1, ability2) => ability1.order - ability2.order);
   }
 
