@@ -12,6 +12,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PokemonAbilityInfoComponent } from './pokemon-info/pokemon-ability-info/pokemon-ability-info.component';
 import { FeetPipe } from './shared/metrics/feet.pipe';
 import { PoundPipe } from './shared/metrics/pound.pipe';
+import { PokemonDescriptionComponent } from './pokemon-info/pokemon-description/pokemon-description.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PoundPipe } from './shared/metrics/pound.pipe';
     NavbarComponent,
     PokemonAbilityInfoComponent,
     FeetPipe,
-    PoundPipe
+    PoundPipe,
+    PokemonDescriptionComponent
   ],
   imports: [
     BrowserModule,
