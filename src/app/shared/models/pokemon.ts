@@ -7,15 +7,15 @@ import {PokemonDescription} from './pokemon-description';
 export class Pokemon {
   baseInfo: PokemonEntry;
   abilityInfo: PokemonAbilityInfo;
-  description: PokemonDescription[];
+  descriptions: PokemonDescription[];
   types: PokemonType[];
   stats: PokemonStats;
 
 
-  constructor(baseInfo: PokemonEntry, abilityInfo: PokemonAbilityInfo, description: PokemonDescription[], types: PokemonType[], stats: PokemonStats) {
+  constructor(baseInfo: PokemonEntry, abilityInfo: PokemonAbilityInfo, descriptions: PokemonDescription[], types: PokemonType[], stats: PokemonStats) {
     this.baseInfo = baseInfo;
     this.abilityInfo = abilityInfo;
-    this.description = description;
+    this.descriptions = descriptions;
     this.types = types;
     this.stats = stats;
   }
