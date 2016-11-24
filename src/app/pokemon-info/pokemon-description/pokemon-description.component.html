@@ -1,5 +1,7 @@
-<div class="card-panel">
-  <p class="flow-text" *ngIf="description != null">{{description.description}}</p>
+<div class="card-panel" [@descriptionState]="description?.version" *ngIf="description != null">
+  <p class="flow-text">
+    {{description.description}}
+  </p>
   <form>
     <div class="input-field">
       <select id="gameVersion" name="gameVersion" [(ngModel)]="description">
