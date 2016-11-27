@@ -6,7 +6,7 @@ import {PokemonDescription} from '../../shared/models/pokemon-description';
   templateUrl: './pokemon-description.component.html',
   styleUrls: ['./pokemon-description.component.css'],
   animations: [
-    trigger('descriptionState', [
+    trigger('cardState', [
       state('Alpha Sapphire', style({ backgroundColor: '#304ffe' })),
       state('Omega Ruby', style({ backgroundColor: '#b71c1c' })),
       state('Y', style({ backgroundColor: '#1e88e5' })),
@@ -31,8 +31,10 @@ import {PokemonDescription} from '../../shared/models/pokemon-description';
       state('Red', style({ backgroundColor: '#d50000' })),
       state('Blue', style({ backgroundColor: '#0d47a1', color: '#e3f2fd' })),
       state('Yellow', style({ backgroundColor: '#fdd835' })),
-      transition('void => *', [style({opacity: 0, backgroundColor: '*'}), animate('500ms ease-in', style({opacity: 1}))]),
       transition('* => *', animate('500ms ease-in'))
+    ]),
+    trigger('descriptionState', [
+      transition('void => *', [style({opacity: 0}), animate('500ms ease-in', style({opacity: 1}))])
     ])
   ]
 })

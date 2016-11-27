@@ -1,6 +1,6 @@
-<div class="card-panel" [@descriptionState]="description?.version" *ngIf="description != null">
-  <p class="flow-text">
-    {{description.description}}
+<div class="card-panel" [@cardState]="description?.version">
+  <p class="flow-text" [@descriptionState]="description" *ngIf="description != null">
+    {{description?.description}}
   </p>
   <form>
     <div class="input-field">
