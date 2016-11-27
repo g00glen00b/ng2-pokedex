@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">Stats</span>
+    <div class="row">
+      <div class="col m6">
+        HP
+        <div class="progress">
+          <div class="determinate" [style.width]="getStatPercent(stats?.hp)" [title]="stats?.hp"></div>
+        </div>
+        Attack
+        <div class="progress">
+          <div class="determinate" [style.width]="getStatPercent(stats?.attack)" [title]="stats?.attack"></div>
+        </div>
+        Defense
+        <div class="progress">
+          <div class="determinate" [style.width]="getStatPercent(stats?.defense)" [title]="stats?.defense"></div>
+        </div>
+      </div>
+      <div class="col m6">
+        Special Attack
+        <div class="progress">
+          <div class="determinate" [style.width]="getStatPercent(stats?.specialAttack)" [title]="stats?.specialAttack"></div>
+        </div>
+        Special Defense
+        <div class="progress">
+          <div class="determinate" [style.width]="getStatPercent(stats?.specialDefense)"  [title]="stats?.specialDefense"></div>
+        </div>
+        Speed
+        <div class="progress">
+          <div class="determinate" [style.width]="getStatPercent(stats?.speed)"  [title]="stats?.speed"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
