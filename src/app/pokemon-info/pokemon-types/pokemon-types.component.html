@@ -1,0 +1,6 @@
+<div class="card">
+  <div class="card-content">
+    <h3 class="card-title">Types</h3>
+    <span *ngFor="let type of types" class="type capitalize" [ngClass]="getColor(type)">{{type.type}}</span>
+  </div>
+</div>

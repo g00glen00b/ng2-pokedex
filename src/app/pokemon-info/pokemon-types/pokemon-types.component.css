@@ -1,0 +1,10 @@
+.type {
+  border-radius: 7px;
+  padding: 7px 10px;
+  color: white;
+  margin: 0 2px;
+}
+
+h3.card-title {
+  margin-top: 0;
+}

@@ -13,6 +13,7 @@ import { PokemonAbilityInfoComponent } from './pokemon-info/pokemon-ability-info
 import { FeetPipe } from './shared/metrics/feet.pipe';
 import { PoundPipe } from './shared/metrics/pound.pipe';
 import { PokemonDescriptionComponent } from './pokemon-info/pokemon-description/pokemon-description.component';
+import { PokemonTypesComponent } from './pokemon-info/pokemon-types/pokemon-types.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PokemonDescriptionComponent } from './pokemon-info/pokemon-description/
     PokemonAbilityInfoComponent,
     FeetPipe,
     PoundPipe,
-    PokemonDescriptionComponent
+    PokemonDescriptionComponent,
+    PokemonTypesComponent
   ],
   imports: [
     BrowserModule,
