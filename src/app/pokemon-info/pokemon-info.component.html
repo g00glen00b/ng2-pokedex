@@ -1,11 +1,16 @@
-<div class="row">
-  <div class="col s6">
-    <app-pokemon-entry [pokemon]="pokemon?.baseInfo" [withLink]="false"></app-pokemon-entry>
-  </div>
-  <div class="col s6">
-    <app-pokemon-ability-info [info]="pokemon?.abilityInfo"></app-pokemon-ability-info>
-    <app-pokemon-description [descriptions]="pokemon?.descriptions"></app-pokemon-description>
-    <app-pokemon-types [types]="pokemon?.types"></app-pokemon-types>
-  </div>
+<div class="center">
+  <app-loader [loading]="loading"></app-loader>
 </div>
-<app-pokemon-stats [stats]="pokemon?.stats"></app-pokemon-stats>
+<div *ngIf="!loading">
+  <div class="row">
+    <div class="col s6">
+      <app-pokemon-entry [pokemon]="pokemon?.baseInfo" [withLink]="false"></app-pokemon-entry>
+    </div>
+    <div class="col s6">
+      <app-pokemon-ability-info [info]="pokemon?.abilityInfo"></app-pokemon-ability-info>
+      <app-pokemon-description [descriptions]="pokemon?.descriptions"></app-pokemon-description>
+      <app-pokemon-types [types]="pokemon?.types"></app-pokemon-types>
+    </div>
+  </div>
+  <app-pokemon-stats [stats]="pokemon?.stats"></app-pokemon-stats>
+</div>

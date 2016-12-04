@@ -11,6 +11,7 @@ import {Title} from '@angular/platform-browser';
 })
 export class PokemonInfoComponent implements OnInit {
   pokemon: Pokemon;
+  loading: boolean = false;
 
   constructor(private _route: ActivatedRoute, private _service: PokemonService, private _titleService: Title) { }
 
@@ -19,7 +20,11 @@ export class PokemonInfoComponent implements OnInit {
       .map(params => params['id'])
       .flatMap(id => this._service.findOne(id))
       .share();
-    observable.subscribe(pokemon => this.pokemon = pokemon);
+    this.loading = true;
+    observable.subscribe(pokemon => {
+      this.pokemon = pokemon;
+      this.loading = false;
+    }, () => this.loading = false);
     observable.subscribe(pokemon => this._titleService.setTitle(`#${pokemon.baseInfo.id} - ${pokemon.baseInfo.name}`));
   }
 
