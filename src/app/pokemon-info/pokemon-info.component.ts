@@ -12,6 +12,7 @@ import {Title} from '@angular/platform-browser';
 export class PokemonInfoComponent implements OnInit {
   pokemon: Pokemon;
   loading: boolean = false;
+  failed: boolean = false;
 
   constructor(private _route: ActivatedRoute, private _service: PokemonService, private _titleService: Title) { }
 
@@ -21,10 +22,14 @@ export class PokemonInfoComponent implements OnInit {
       .flatMap(id => this._service.findOne(id))
       .share();
     this.loading = true;
+    this.failed = false;
     observable.subscribe(pokemon => {
       this.pokemon = pokemon;
       this.loading = false;
-    }, () => this.loading = false);
+    }, () => {
+      this.loading = false;
+      this.failed = true;
+    });
     observable.subscribe(pokemon => this._titleService.setTitle(`#${pokemon.baseInfo.id} - ${pokemon.baseInfo.name}`));
   }
 
