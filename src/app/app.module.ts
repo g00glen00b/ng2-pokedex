@@ -15,6 +15,7 @@ import { PoundPipe } from './shared/metrics/pound.pipe';
 import { PokemonDescriptionComponent } from './pokemon-info/pokemon-description/pokemon-description.component';
 import { PokemonTypesComponent } from './pokemon-info/pokemon-types/pokemon-types.component';
 import { PokemonStatsComponent } from './pokemon-info/pokemon-stats/pokemon-stats.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PokemonStatsComponent } from './pokemon-info/pokemon-stats/pokemon-stat
     PoundPipe,
     PokemonDescriptionComponent,
     PokemonTypesComponent,
-    PokemonStatsComponent
+    PokemonStatsComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
