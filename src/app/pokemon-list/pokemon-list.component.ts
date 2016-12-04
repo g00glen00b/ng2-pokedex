@@ -12,6 +12,7 @@ export class PokemonListComponent implements OnInit {
   count: number = 0;
   offset: number = 0;
   limit: number = 20;
+  loading: boolean = false;
 
   constructor(private _service: PokemonService) { }
 
@@ -21,10 +22,12 @@ export class PokemonListComponent implements OnInit {
 
   findAll(offset: number, limit: number) {
     this.pokemons = [];
+    this.loading = true;
     this._service.findAll(offset, limit).subscribe(result => {
       this.pokemons = result.pokemons;
       this.count = result.count;
-    });
+      this.loading = false;
+    }, () => this.loading = false);
   }
 
   onPageChange(offset) {

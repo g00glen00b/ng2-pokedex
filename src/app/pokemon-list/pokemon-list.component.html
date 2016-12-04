@@ -1,3 +1,6 @@
+<div class="center">
+  <app-loader [loading]="loading"></app-loader>
+</div>
 <div class="row">
   <div class="col s3" *ngFor="let pokemon of pokemons">
     <app-pokemon-entry [pokemon]="pokemon"></app-pokemon-entry>
