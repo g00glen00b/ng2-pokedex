@@ -4,7 +4,7 @@
   </p>
   <form>
     <div class="input-field">
-      <select id="gameVersion" name="gameVersion" [(ngModel)]="description">
+      <select id="gameVersion" name="gameVersion" [(ngModel)]="description" [@cardState]="description?.version">
         <option *ngFor="let description of descriptions" [ngValue]="description">
           {{description.version}}
         </option>
