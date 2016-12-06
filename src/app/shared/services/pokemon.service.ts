@@ -42,7 +42,12 @@ export class PokemonService {
   }
 
   getList(data):PokemonList {
-    return new PokemonList(data.results.map(result => this.getEntry(result)), data.count);
+    // Manually filter all pokémons above 10000 since these are not official but mega evolutions
+    let results = data.results
+      .map(result => this.getEntry(result))
+      .filter(entry => entry.id < 10000);
+    // Manually override count to 721 to exclude mega's
+    return new PokemonList(results, 721);
   }
 
   getEntry(data): PokemonEntry {
