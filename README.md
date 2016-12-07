@@ -1,31 +1,34 @@
-# Ng2Pokedex
+# Angular 2 Pokédex
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
+## Development
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Requirements
+This project was generated with [angular-cli](https://github.com/angular/angular-cli), so in order to run this project, you'll have to install it as well.
 
-## Code scaffolding
+### Development server
+To run the application locally, you have to run the following command:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+```
+ng serve
+```
 
-## Build
+After this, you can go to [http://localhost:4200](http://localhost:4200) to view the application.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Libraries
+The following libraries were used:
+- [Angular 2](https://angular.io/)
+- [Lodash](https://lodash.com/)
+- [Materialize](http://materializecss.com/)
+- [RxJS](http://reactivex.io/)
 
-## Running unit tests
+## Documentation
+The development of this application is documented in the following articles:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. [Getting started with Angular 2 using Angular CLI](http://g00glen00b.be/starting-angular-cli/)
+2. [Writing services with Angular 2 and RxJS](http://g00glen00b.be/services-angular-rxjs/)
+3. [Writing your first component with Angular 2](http://g00glen00b.be/component-angular-2/)
+4. [Creating a pagination component with Angular 2](http://g00glen00b.be/pagination-component-angular-2/)
+5. [Using routing with Angular 2](http://g00glen00b.be/routing-angular-2/)
+6. [Changing your page title when a route changes with Angular 2](http://g00glen00b.be/page-title-route-change-angular-2/)
+7. [Implementing your own pipes with Angular 2](http://g00glen00b.be/implementing-pipes-angular-2/)
+8. [Animating with Angular 2](http://g00glen00b.be/animating-angular-2/)
