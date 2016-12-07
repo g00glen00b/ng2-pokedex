@@ -32,3 +32,4 @@ The development of this application is documented in the following articles:
 6. [Changing your page title when a route changes with Angular 2](http://g00glen00b.be/page-title-route-change-angular-2/)
 7. [Implementing your own pipes with Angular 2](http://g00glen00b.be/implementing-pipes-angular-2/)
 8. [Animating with Angular 2](http://g00glen00b.be/animating-angular-2/)
+9. [Showing a loader with Angular 2](http://g00glen00b.be/angular-2-loader/)
