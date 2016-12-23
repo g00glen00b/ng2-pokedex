@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PokemonService} from '../shared/services/pokemon.service';
 import {PokemonEntry} from '../shared/models/pokemon-entry';
+import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   providers: [PokemonService],
@@ -15,10 +16,14 @@ export class PokemonListComponent implements OnInit {
   loading: boolean = false;
   failed: boolean = false;
 
-  constructor(private _service: PokemonService) { }
+  constructor(private _service: PokemonService, private _router: Router, private _route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.findAll(this.offset, this.limit);
+    let observable = this._route.params
+      .map(params => params['nr'])
+      .map(pageNr => (pageNr - 1) * this.limit);
+    observable.subscribe(offset => this.offset = offset);
+    observable.share().subscribe(offset => this.findAll(offset, this.limit));
   }
 
   findAll(offset: number, limit: number) {
@@ -37,6 +42,6 @@ export class PokemonListComponent implements OnInit {
 
   onPageChange(offset) {
     this.offset = offset;
-    this.findAll(offset, this.limit);
+    this._router.navigate(['/page', (offset / this.limit) + 1]);
   }
 }

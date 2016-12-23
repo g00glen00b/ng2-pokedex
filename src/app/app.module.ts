@@ -39,7 +39,8 @@ import { LoaderComponent } from './shared/loader/loader.component';
     HttpModule,
     RouterModule.forRoot([
       { path: 'pokemon/:id', component: PokemonInfoComponent },
-      { path: '', component: PokemonListComponent }
+      { path: 'page/:nr', component: PokemonListComponent },
+      { path: '', redirectTo: '/page/1', pathMatch: 'full' }
     ])
   ],
   providers: [],
