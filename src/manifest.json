@@ -1,0 +1,20 @@
+{
+  "short_name": "Pokédex",
+  "name": "Angular 2 Pokédex",
+  "icons": [{
+    "src": "assets/icon48x48.png",
+    "type": "image/png",
+    "sizes": "48x48"
+  }, {
+    "src": "assets/icon96x96.png",
+    "type": "image/png",
+    "sizes": "96x96"
+  }, {
+    "src": "assets/icon192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "page/1",
+  "background_color": "#eeeeee",
+  "theme_color": "#d32f2f"
+}

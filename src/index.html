@@ -6,8 +6,10 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="theme-color" content="#d32f2f">
+  <link rel="icon" type="image/png" href="assets/icon48x48.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body class="grey lighten-3">
   <app-root>
@@ -21,5 +23,14 @@
       </div>
     </div>
   </app-root>
+  <noscript>
+    <div class="center grey-text text-lighten-1">
+      <i class="large material-icons">report_problem</i>
+      <p>This application requires <strong>JavaScript</strong> to properly work. Consider enabling JavaScript for this website.</p>
+    </div>
+    <style>
+      app-root { display: none; }
+    </style>
+  </noscript>
 </body>
 </html>
