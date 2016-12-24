@@ -1,6 +1,9 @@
 {
   "short_name": "Pokédex",
   "name": "Angular 2 Pokédex",
+  "lang": "en",
+  "dir": "ltr",
+  "display": "fullscreen",
   "icons": [{
     "src": "assets/icon48x48.png",
     "type": "image/png",
